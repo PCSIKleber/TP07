@@ -27,7 +27,7 @@ def fais_tests(choix):
 
 def detaille_note():
     '''Pour calculer les notes à chaque sous-suite de tests.'''
-    total_general  = 0
+    total_general  = 5
     success_general= 0
     for k in sorted(DICO.keys()):
         s = unittest.TestLoader().loadTestsFromTestCase(DICO[k])
@@ -44,3 +44,4 @@ def detaille_note():
     print('='*20)
     print('Globalement: {}/{}'.format(success_general,total_general))
     print('Note indicative: {}/20'.format(round(success_general/total_general*20,2)))
+    print('A noter que 5 points seront evalues "a l\'oeil" d\'apres le graphique produit')
